@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { productDb } from '../models/productModel.js';
+import { productDb, productAddedSchema } from '../models/productModel.js';
 import Order, { orderDb } from '../models/orderModel.js';
 import { navigationDb } from '../models/navigationModel.js';
 import { userDb, userSchema, loginSchema } from '../models/userModel.js';
@@ -174,7 +174,17 @@ const validate = {
             req.products = products;
             next();
 
-        }
+        },
+        addNew: async (req, res, next) => {
+            const { error } = productAddedSchema.validate(req.body);
+
+            if (error) {
+                validationError.message = error.details[0].message;
+                validationError.status = 400;
+                return next(validationError);
+            }
+            next();
+        },
     },
 
     users: {
