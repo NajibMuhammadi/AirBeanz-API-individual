@@ -26,5 +26,12 @@ router.delete('/:productId',
     controller.deleteProduct
 );
 
+router.put('/:productId',
+    authMiddleware.checkUserStrict,
+    validateMiddleware.users.isAdmin,
+    validateMiddleware.products.addNew,
+    controller.modifyProduct
+);
+
 export default router;
 

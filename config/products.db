@@ -3,4 +3,6 @@
 {"id":5,"title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"UQWXNsKroS9bKZL0","estimatedTimeInMinutes":0.5}
 {"id":4,"title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"XJDnoqZemVtSSIhm","estimatedTimeInMinutes":1.5}
 {"id":1,"title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"acDrF5CFhSivFUau","estimatedTimeInMinutes":0.15}
+{"title":"testat och klart","desc":"test och klart, fungerar att uptadera den varan","price":"1","id":8,"addedAt":"2024-06-11 10:54:59","_id":"fACM99LsRzlW5G0b","modifiedAt":"2024-06-11 10:55:17"}
+{"title":"testat och klart","desc":"test och klart, fungerar att uptadera den varan","price":"1","id":7,"addedAt":"2024-06-11 10:32:49","_id":"gSCAzB0eBauCclmJ","modifiedAt":"2024-06-11 10:48:18"}
 {"id":3,"title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"zICZOIWupgL5459G","estimatedTimeInMinutes":1}

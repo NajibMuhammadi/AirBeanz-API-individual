@@ -17,6 +17,6 @@ export const productDb = nedb.create({
 
 export const productAddedSchema = Joi.object({
     desc: Joi.string().min(10).required(),
-    title: Joi.string().min(5).required(),
+    title: Joi.string().min(5).max(30).required(),
     price: Joi.number().positive().required()
 });

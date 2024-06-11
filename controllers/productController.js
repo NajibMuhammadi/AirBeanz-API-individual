@@ -96,5 +96,41 @@ export default class ProductController {
             });
         }
     }
+    modifyProduct = async (req, res) => {
+        try {
+           
+            const { productId } = req.params;
+            const updates = req.body;
+
+            updates.modifiedAt = new Date().toLocaleString();
+
+            const updatedProduct = await productDb.update(
+                { _id: productId },
+                { $set: updates },
+                { new: true });
+
+            if (!updatedProduct) {
+                return res.status(404).json({
+                    success: false,
+                    status: 404,
+                    message: 'Product not found',
+                    product: updatedProduct
+                });
+            }
+            res.status(200).json({
+                success: true,
+                status: 200,
+                message: 'Product updated',
+                product: updatedProduct
+            });
+            } catch (error) {
+                res.status(500).json({
+                    success: false,
+                    status: 500,
+                    message: 'Product not updated',
+                    error: error.message
+                });
+        }    
+    }
 }
 
