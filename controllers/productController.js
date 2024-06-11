@@ -58,9 +58,9 @@ export default class ProductController {
             });
 
         }catch (error) {
-            res.status(500).json({
+            res.status(404).json({
                 success: false,
-                status: 500,
+                status: 404,
                 message: 'Product not added',
                 error: error.message
             });

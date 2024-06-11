@@ -12,7 +12,7 @@ router.get('/', validateMiddleware.products.many, controller.getAllProducts);
 
 router.get('/:productId', validateMiddleware.products.one, controller.getProduct);
 
-router.post('/',
+router.post('/addproduct',
     authMiddleware.checkUserStrict,
     validateMiddleware.users.isAdmin,
     validateMiddleware.products.addNew,

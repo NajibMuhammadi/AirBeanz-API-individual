@@ -4,5 +4,7 @@
 {"id":4,"title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"XJDnoqZemVtSSIhm","estimatedTimeInMinutes":1.5}
 {"id":1,"title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"acDrF5CFhSivFUau","estimatedTimeInMinutes":0.15}
 {"title":"testat och klart","desc":"test och klart, fungerar att uptadera den varan","price":"1","id":8,"addedAt":"2024-06-11 10:54:59","_id":"fACM99LsRzlW5G0b","modifiedAt":"2024-06-11 10:55:17"}
+{"title":"bör inte vara tömt","desc":"Detta måste vara minst 10 tecken","price":"15","id":10,"addedAt":"2024-06-11 14:00:07","_id":"g7ZYlrR28AQnkJEa"}
 {"title":"testat och klart","desc":"test och klart, fungerar att uptadera den varan","price":"1","id":7,"addedAt":"2024-06-11 10:32:49","_id":"gSCAzB0eBauCclmJ","modifiedAt":"2024-06-11 10:48:18"}
+{"title":"testat och klart","desc":"test och klart, fungerar att uptadera den varan","price":"1","id":9,"addedAt":"2024-06-11 13:02:22","_id":"xY8Fz6hpRNz2igXM","modifiedAt":"2024-06-11 13:02:30"}
 {"id":3,"title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"zICZOIWupgL5459G","estimatedTimeInMinutes":1}

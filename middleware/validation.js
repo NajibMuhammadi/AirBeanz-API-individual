@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { productDb, productAddedSchema } from '../models/productModel.js';
+import {campaignAddedschema} from '../models/campaignModel.js';
 import Order, { orderDb } from '../models/orderModel.js';
 import { navigationDb } from '../models/navigationModel.js';
 import { userDb, userSchema, loginSchema } from '../models/userModel.js';
@@ -185,6 +186,36 @@ const validate = {
             }
             next();
         },
+        addNewCampaign: async (req, res, next) => {
+            const { error } = campaignAddedschema.validate(req.body);
+
+            if (error) {
+                validationError.message = error.details[0].message;
+                validationError.status = 400;
+                return next(validationError);
+            }
+
+            const prod1 = await productDb.findOne({ _id: req.body.prod1 });
+            const prod2 = await productDb.findOne({ _id: req.body.prod2 });
+
+            if (!prod1) {
+                validationError.message = 'Product One not found.';
+                validationError.status = 404;
+                return next(validationError);
+            }
+
+            if (!prod2) {
+                validationError.message = 'Product Two not found.';
+                validationError.status = 404;
+                return next(validationError);
+            }
+            req.body.prod1 = prod1;
+            req.body.prod2 = prod2;
+            next();
+        }
+        
+       
+
     },
 
     users: {
@@ -311,7 +342,8 @@ const validate = {
         }
         req.textInfo = textInfo;
         next();
-    } 
-}
+    }
+
+};
 
 export default validate;
